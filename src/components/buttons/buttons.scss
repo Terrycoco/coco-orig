@@ -1,0 +1,98 @@
+@import '../../styles/_coco';
+@import './_ripple.scss';
+
+//remove light blue auto tap color
+button {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.button {
+	font-family: $sans-serif;
+  border: none;
+  border-radius: 4px;
+  padding: .75em;
+  font-size: $smallest;
+  display: inline;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  width: calc(max-content + 10px);
+  height: 40px;
+
+}
+
+.button-face {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.button-face > * {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+.button:hover {
+   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
+
+.raised-btn {
+	min-width: 70px;
+	box-shadow: 0 0 4px #999;
+	background: $accent;
+	text-transform: uppercase;
+}
+
+.raised-btn:hover {
+  background: lighten($accent, 5%);
+}
+
+.flat-btn {
+	background: $light;
+	color: $primary;
+	border: none;
+	box-shadow: none;
+	text-transform: uppercase;
+}
+
+.flat-btn:hover {
+	background: $highlight;
+}
+
+
+.menu-btn {
+	background: $highlightopaque; 
+	color: $primary;
+	box-shadow: none;
+	border-radius: none;
+	flex: 1;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+.menu-btn.save {
+	background: $accent;
+	color: $light;
+}
+
+
+.menu-btn:hover {
+	background: darken($highlightopaque, 10%);
+}
+
+.oval {
+  border-radius: 25% !important;
+}
+
+.dialog-btn {
+  background: $highlightopaque;
+  font-size: $smaller;
+  font-weight: bold;
+  color: $primary;
+}

@@ -1,0 +1,81 @@
+//typography
+$smallest: .75em; //12px
+$smaller: .875em; //14px
+$regular: 1em; //16px
+$bigger: 1.125em; //18px
+$biggest: 1.25em; //20px
+$sans-serif: 'Lato', 'Verdana', 'Helvetica',  sans-serif;
+
+
+//choose your colors
+$deep: #0F1B07;
+$light: #fbfbfb;
+$green: #5C821A;
+$brightgreen: lighten(#C6D166, 10%);
+$orange: #fd8258;
+$lightorange: lighten($orange, 10%);
+$gray: rgb(224, 224, 224);
+$lightgray: lighten(black, 65%); //#666;
+$darkorange: #d43511;
+$barelygreen: rgba(198, 209, 102, .2); //has transparency
+$barelygreenopaque: rgb(242, 244, 220);
+$darkgreen: #406902;
+$shadow: #B4B5B5;
+$blue: #58abfd;
+$darkred: #b32400;
+$lightred: #ffad99;
+$lightyellow: #ffffcc;
+
+//change to your chosen colors
+$dark: $deep; 
+$primary: $green; 
+$secondary: $brightgreen;
+$accent: $orange;
+$darkaccent: $darkorange;
+$disabled: $lightgray;
+$highlight: $barelygreen;
+$highlightopaque: $barelygreenopaque;
+$selected: lighten($brightgreen, 20%);
+$error: $darkorange;
+$success: $primary;
+
+//some basic defaults
+body {
+	background: $light;
+	color: $dark;
+}
+
+
+hr.accent {
+  border-top: 2px solid $accent;
+}
+
+hr.primary {
+  border-top: 2px solid $gray;
+}
+
+
+a, a:link {
+  color: $accent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+}
+
+
+//selected text
+::selection
+{
+color: $dark;
+background: $selected;
+
+}
+::-moz-selection
+{
+color: $dark;
+background: $selected;
+}
+
+
+
