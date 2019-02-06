@@ -25,13 +25,14 @@ button {
 
 .button-face {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-between;
+	align-items: top;
 }
 
 .button-face > * {
 	display: inline;
-	margin: 0 5px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 

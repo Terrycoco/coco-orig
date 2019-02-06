@@ -8,9 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons';
 library.add(faIgloo);
 
+const req = require.context('../src/components', true, /\.stories\.js$/);
 
 function loadStories() {
-  require('../src/stories');
+  req.keys().forEach(filename => req(filename));
 }
+// function loadStories() {
+//   require('../src/components/buttons/buttons.stories.js');
+// }
 
 configure(loadStories, module);
